@@ -1,15 +1,13 @@
-package guru.qa.tests;
+package com.demoqa;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Student_Registration_Form {
 
@@ -17,7 +15,7 @@ public class Student_Registration_Form {
     static void setUp() {
         Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1366x768";
+        Configuration.browserSize = "1920x1080";
     }
 
     @Test
@@ -41,7 +39,7 @@ public class Student_Registration_Form {
         $("[aria-label='Choose Thursday, December 8th, 1994']").click();
         $("#subjectsInput").click();
         $("#subjectsInput").setValue("M").pressEnter();
-        $(byText("Sports")).click();
+        $("#hobbiesWrapper").find(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("460.jpg");
         $("#currentAddress").setValue(currentAddress);
         $("#state").click();
