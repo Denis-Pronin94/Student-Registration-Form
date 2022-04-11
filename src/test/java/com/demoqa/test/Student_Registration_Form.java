@@ -53,16 +53,16 @@ public class Student_Registration_Form {
                 .setKarnal()
                 .setSubmit()
                 // Asserts
-                .setcheckNameFormInput("Thanks for submitting the form")
-                .setCheckCompletedForm(firstName + " " + lastName)
-                .setCheckCompletedForm(userEmail)
-                .setCheckCompletedForm(gender)
-                .setCheckCompletedForm(userNumber)
-                .setCheckCompletedForm(day + " " + month + "," + year)
-                .setCheckCompletedForm(subjects)
-                .setCheckCompletedForm(hobbies)
-                .setCheckCompletedForm(picture)
-                .setCheckCompletedForm(currentAddress)
-                .setCheckCompletedForm(state + " " + city);
+                .checkNameFormInput("Thanks for submitting the form")
+                .checkCompletedForm(firstName + " " + lastName)
+                .checkCompletedForm(userEmail)
+                .checkCompletedForm(gender)
+                .checkCompletedForm(userNumber)
+                .checkCompletedForm(day + " " + month + "," + year)
+                .checkCompletedForm(subjects)
+                .checkCompletedForm(hobbies)
+                .checkCompletedForm(picture)
+                .checkCompletedForm(currentAddress)
+                .checkCompletedForm(state + " " + city);
     }
 }

@@ -121,12 +121,12 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public  RegistrationFormPage setcheckNameFormInput(String text) {
+    public  RegistrationFormPage checkNameFormInput(String text) {
         checkNameFormInput.shouldHave(text(text));
         return this;
     }
 
-    public  RegistrationFormPage setCheckCompletedForm(String text) {
+    public  RegistrationFormPage checkCompletedForm(String text) {
         checkCompletedForm.shouldHave(text(text));
         return this;
     }
