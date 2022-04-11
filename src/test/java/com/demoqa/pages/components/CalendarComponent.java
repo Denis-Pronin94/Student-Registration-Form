@@ -8,6 +8,6 @@ public class CalendarComponent {
             $("#dateOfBirthInput").click();
             $(".react-datepicker__month-select").selectOption(month);
             $(".react-datepicker__year-select").selectOption(year);
-            $("[aria-label='Choose Thursday, December 8th, 1994']").click();
+            $(".react-datepicker__day--0" + day).click();
         }
 }

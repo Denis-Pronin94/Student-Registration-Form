@@ -16,21 +16,20 @@ public class RegistrationFormPage {
     SelenideElement firstNameInput = $("#firstName");
     SelenideElement lastNameInput = $("#lastName");
     SelenideElement userEmailInput = $("#userEmail");
-    SelenideElement Gender = $(".custom-control-label");
+    SelenideElement gender = $(".custom-control-label");
     SelenideElement userNumberInput = $("#userNumber");
-    SelenideElement Datepickermonth = $("#dateOfBirthInput");
-    SelenideElement SubjectsInputClick = $("#subjectsInput");
-    SelenideElement SubjectsInputM = $("#subjectsInput");
-    SelenideElement HobbiesWrapper = $("#hobbiesWrapper");
-    SelenideElement UploadPicture = $("#uploadPicture");
+    SelenideElement dateOfBirthInput = $("#dateOfBirthInput");
+    SelenideElement subjectsInputClick = $("#subjectsInput");
+    SelenideElement hobbiesWrapper = $("#hobbiesWrapper");
+    SelenideElement uploadPicture = $("#uploadPicture");
     SelenideElement currentAddressInput = $("#currentAddress");
-    SelenideElement State = $("#state");
-    SelenideElement Haryana = $(byText("Haryana"));
-    SelenideElement City = $("#city");
-    SelenideElement Karnal = $(byText("Karnal"));
-    SelenideElement Submit = $("#submit");
-    SelenideElement Thanksforsubmittingtheform = $("#example-modal-sizes-title-lg");
-    SelenideElement Tableresponsive = $(".table-responsive");
+    SelenideElement state = $("#state");
+    SelenideElement haryana = $(byText("Haryana"));
+    SelenideElement city = $("#city");
+    SelenideElement karnal = $(byText("Karnal"));
+    SelenideElement submit = $("#submit");
+    SelenideElement checkNameFormInput = $("#example-modal-sizes-title-lg");
+    SelenideElement checkCompletedForm = $(".table-responsive");
 
     // actions
     public RegistrationFormPage openPage() {
@@ -57,7 +56,7 @@ public class RegistrationFormPage {
     }
 
     public  RegistrationFormPage setGender() {
-        Gender.click();
+        gender.click();
         return this;
     }
 
@@ -66,29 +65,29 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public  RegistrationFormPage setDatepickermonth(String day, String month, String year) {
-        Datepickermonth.click();
+    public  RegistrationFormPage setdateOfBirthInput(String day, String month, String year) {
+        dateOfBirthInput.click();
         calendarComponent.setDate(day, month, year);
         return this;
     }
 
     public  RegistrationFormPage setSubjectsInputClick() {
-        SubjectsInputClick.click();
+        subjectsInputClick.click();
         return this;
     }
 
-    public  RegistrationFormPage setSubjectsInputM(String subjects) {
-        SubjectsInputM.setValue(subjects).pressEnter();
+    public  RegistrationFormPage setSubjectsInputClick(String subjects) {
+        subjectsInputClick.setValue(subjects).pressEnter();
         return this;
     }
 
     public  RegistrationFormPage setHobbiesWrapper(String hobbies) {
-        HobbiesWrapper.find(byText("Sports")).click();
+        hobbiesWrapper.$(byText(hobbies)).click();
         return this;
     }
 
     public  RegistrationFormPage setUploadPicture(String picture) {
-        UploadPicture.uploadFromClasspath(picture);
+        uploadPicture.uploadFromClasspath(picture);
         return this;
     }
 
@@ -98,37 +97,37 @@ public class RegistrationFormPage {
     }
 
     public  RegistrationFormPage setState() {
-        State.click();
+        state.click();
         return this;
     }
 
     public  RegistrationFormPage setHaryana() {
-        Haryana.click();
+        haryana.click();
         return this;
     }
 
     public  RegistrationFormPage setCity() {
-        City.click();
+        city.click();
         return this;
     }
 
     public  RegistrationFormPage setKarnal() {
-        Karnal.click();
+        karnal.click();
         return this;
     }
 
     public  RegistrationFormPage setSubmit() {
-        Submit.pressEnter();
+        submit.pressEnter();
         return this;
     }
 
-    public  RegistrationFormPage setThanksforsubmittingtheform(String text) {
-        Thanksforsubmittingtheform.shouldHave(text(text));
+    public  RegistrationFormPage setcheckNameFormInput(String text) {
+        checkNameFormInput.shouldHave(text(text));
         return this;
     }
 
-    public  RegistrationFormPage setTableresponsive(String text) {
-        Tableresponsive.shouldHave(text(text));
+    public  RegistrationFormPage setCheckCompletedForm(String text) {
+        checkCompletedForm.shouldHave(text(text));
         return this;
     }
 }
